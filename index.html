@@ -1,37 +1,137 @@
 <!DOCTYPE html>
-<html lang="eng">
-	<head>
-		<meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>My Resume</title>
-	</head>
-	<body>
-		<h1>Kati's Resume</h1>
-		<h3>Who am I?</h3>
-		<img width="130" src="./F7AD5726-24D1-4853-B41F-F4136BDF0DBE.png" alt="Picture of Ghibli Iron Gholem">
-			<p>Hi, my Name is Kati. Im a german-greek girl trying to learn Full-Stack Web Developement.</p>
-			<hr>
-		<h3>Education</h3>
-			<ul>
-				<li>2010 - 2018: Abitur at a Gymnasium in Lower Saxony</li>
-				<li>2019 - 2024: Bachelor of Art in Urban Management at the Ostfalia</li>
-			</ul>
-			<h3>Skills</h3>
-			<ul>
-				<li>Communication</li>
-				<li>Team Work</li>
-				<li>Stress Resistant</li>
-				<li>Organization</li>
-			</ul>
-			<h3>Hobbys</h3>
-			<ul>
-				<li>Reading</li>
-				<li>Travelling</li>
-				<li>Learning new Stuff</li>
-			</ul>
-			<hr>
-	<footer>
-		<a href="./contact.html">Contact Me</a>
-	</footer>
-	</body>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Sono", sans-serif;
+       ul {
+          list-style-type: none;}
+       }
+
+       .plan-titel{
+        font-weight: bold;
+       }
+
+      .pricing-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 2rem;
+       } 
+
+      .pricing-plan {
+        background-color: #F2F1EB;
+        width: 300px;
+        text-align: center;
+        padding: 10px 15px;
+        border-radius: 2%;
+        }
+
+        .plan-title{
+        font-weight: bold;
+          }
+
+        .plan-price {
+          font-weight: bold;
+          font-size: xx-large;
+        }
+
+        li {
+          font-size: smaller;
+          margin: 10px;
+          text-align: center;
+        }
+        
+      .plan-button {
+        background-color: #88AB8E;
+        padding: 6px;
+        border-radius: 6%;
+        border: 0;
+        color: rgb(237, 247, 242);
+      }
+
+      /* Hint: What can you do with a media query and flexbox? */
+   @media (max-width: 1250px) {
+        .pricing-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          gap: 2rem;
+          }
+
+        .plan-title{
+        font-weight: bold;
+        font-size: xx-large;
+          }
+
+        .plan-price {
+          font-weight: bold;
+        }
+
+        .pricing-plan {
+          background-color: #F2F1EB;
+          width: 300px;
+          text-align: center;
+          padding: 10px 15px;
+          border-radius: 2%;
+          }
+          
+        li {
+          font-size: smaller;
+          margin: 10px;
+          text-align: center;
+        }
+
+      .plan-button {
+        background-color: #88AB8E;
+      }
+     }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price">$9.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li>🚫 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Standard</div>
+        <div class="plan-price">$19.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li>✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Premium</div>
+        <div class="plan-price">$49.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li>✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+  </body>
 </html>
